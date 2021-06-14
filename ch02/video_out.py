@@ -15,6 +15,8 @@ fps = cap.get(cv2.CAP_PROP_FPS)
 fourcc = cv2.VideoWriter_fourcc(*'DIVX') # *'DIVX' == 'D', 'I', 'V', 'X'
 delay = round(1000 / fps)
 
+# fourcc : 4-문자코드, 동영상 파일의 코덱, 압축방식, 색상, 픽셀 포맷등을 정의하는 정수값
+# fps : 초당 프레임 수
 out = cv2.VideoWriter('output.avi', fourcc, fps, (w, h))
 
 if not out.isOpened():

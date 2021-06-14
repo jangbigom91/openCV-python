@@ -17,7 +17,7 @@ def on_mouse(event, x, y, flags, param):
 
     elif event == cv2.EVENT_MOUSEMOVE:
         if flags & cv2.EVENT_FLAG_LBUTTON:
-            cv2.line(img, (oldx, oldy), (x, y), (0, 0, 255), 4, cv2.LINE_AA)
+            cv2.line(img, (oldx, oldy), (x, y), (0, 255, 255), 4, cv2.LINE_AA)
             cv2.imshow('image', img)
             oldx, oldy = x, y
 

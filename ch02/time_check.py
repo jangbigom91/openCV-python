@@ -4,7 +4,7 @@ import numpy as np
 import cv2
 
 
-img = cv2.imread('hongkong.jpg')
+img = cv2.imread('./ch02/hongkong.jpg')
 
 tm = cv2.TickMeter()
 
