@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 
-src = cv2.imread('Hawkes.jpg', cv2.IMREAD_GRAYSCALE)
+src = cv2.imread('./ch03/Hawkes.jpg', cv2.IMREAD_GRAYSCALE)
 
 if src is None:
     print('Image load failed!')

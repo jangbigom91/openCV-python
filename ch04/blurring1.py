@@ -3,14 +3,15 @@ import numpy as np
 import cv2
 
 
-src = cv2.imread('./ch03/lenna.bmp', cv2.IMREAD_GRAYSCALE)
+src = cv2.imread('./ch04/rose.bmp', cv2.IMREAD_GRAYSCALE)
 
 if src is None:
     print('Image load failed!')
     sys.exit()
 
-alpha = 1.0
-dst = np.clip((1+alpha)*src - 128*alpha, 0, 255).astype(np.uint8)
+#kernel = np.ones((3, 3), dtype=np.float64) / 9.
+#dst = cv2.filter2D(src, -1, kernel)
+dst = cv2.blur(src, (5, 5))
 
 cv2.imshow('src', src)
 cv2.imshow('dst', dst)

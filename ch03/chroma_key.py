@@ -4,14 +4,14 @@ import cv2
 
 
 # 녹색 배경 동영상
-cap1 = cv2.VideoCapture('woman.mp4')
+cap1 = cv2.VideoCapture('./ch03/woman.mp4')
 
 if not cap1.isOpened():
     print('video open failed!')
     sys.exit()
 
 # 비오는 배경 동영상
-cap2 = cv2.VideoCapture('raining.mp4')
+cap2 = cv2.VideoCapture('./ch03/raining.mp4')
 
 if not cap2.isOpened():
     print('video open failed!')
